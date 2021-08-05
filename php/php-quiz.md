@@ -616,3 +616,28 @@ isset($_POST['submit'])
 - [ ] `__FUNCTION__`
 - [ ] `__CLASS__`
 - [ ] `__TRAIT__`
+
+
+#### Q57. You want to find out what day Twelfth Night falls on after Christmas 2018. Which code should you use?
+- [X]
+  ```php
+  $twelfth_night = strtotime('December 25, 2018 + 12 days');
+  echo date('d', $twelfth_night);
+  ```
+- [ ]
+  ```php
+  $xmas = new DateTime('Dec 25, 2018');
+  $twelfth_night = $xmas->add(strtotime('12 days'));
+  echo $twelfth_night->format('D');
+  ```
+- [x]
+  ```php
+  $twelfth_night = strtotime('December 25, 2018 + 12 days');
+  echo strftime('%d', $twelfth_night);
+  ```
+- [ ]
+  ```php
+  $xmas = new DateTime('Dec 25, 2018');
+  $twelfth_night = $xmas-&gt;add(new DateInterval('P12D'));
+  echo $twelfth_night-&gt;format('1');
+  ```****
